@@ -26,7 +26,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="w-8/12 border border-gray-500 mx-auto mt-20 p-20 flex flex-col  mb-10 items-center rounded-2xl shadow-2xl">
+      <div className="w-6/12 border border-gray-500 mx-auto mt-20 p-20 flex flex-col  mb-10 items-center rounded-2xl shadow-2xl">
         <Image src={calculator} alt="Calculator" width={200} />
         <h1 className="text-3xl text-green-800 font-bold mt-5">
           Varity Calculator V.1.0
