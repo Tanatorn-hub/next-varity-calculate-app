@@ -4,9 +4,11 @@ import Image from "next/image";
 import calculator from "../assets/images/calculator.png";
 import Footer from "@/components/Footer";
 import { useState } from "react";
-import { handler } from "next/dist/build/templates/app-page";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
+  //สร้างตัวแปร router เพื่อเรียกใช้คำสั่งสำหรับการ redirect ไปยัง component page อื่น
+  const router = useRouter();
   //สร้างตัวแปร state สำหรับเก็บค่ารหัสที่ผู้ใช้ป้อนเข้ามา
   const [ucode, setUcode] = useState("");
 
@@ -18,7 +20,8 @@ export default function HomePage() {
     }
     if (ucode.toLowerCase() === "sau") {
       //เปิดไป component  page /menu
-      window.location.href = "/menu";
+      // window.location.href = "/menu";
+      router.push("/menu");
     } else {
       alert("รหัสไม่ถูกต้อง");
     }
